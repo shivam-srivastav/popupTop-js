@@ -1,0 +1,73 @@
+.popup{
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+.widget-left{
+    background: red;
+    display: flex;
+    width: 30%;
+       margin: 0.25rem;
+    border: 1px solid grey;
+    list-style: none;
+    transition: 500ms;
+    transition: all 2s linear;
+    padding: .5rem;
+    animation: 500ms ease-in-out slideInFromLeft;
+}
+
+.widget-right{
+    background: red;
+    display: flex;
+    width: 30%;
+       margin: 0.25rem;
+    border: 1px solid grey;
+    list-style: none;
+    transition: 500ms;
+    transition: all 2s linear;
+    padding: .5rem;
+    animation: 500ms ease-in-out slideInFromRight;
+}
+.widget-left img{
+    width: 80px;
+}
+
+.widget-right img{
+    width: 80px;
+}
+.hide{
+  transition: 500ms;
+  animation: 500ms ease-out  hidden;
+  opacity: 0;
+}
+.hidden{
+    display: none;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hidden {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+    
+}
